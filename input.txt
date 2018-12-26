@@ -1,0 +1,7 @@
+Long Integer a, b, c
+Begin
+a = 5 ;
+b = 10 ;
+b = "-" b ;
+c = "-" ( a "*" b ) "*" ( a "+" a ) "-" ( b "/" a "+" b ) ;
+End

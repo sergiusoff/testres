@@ -1,0 +1,20 @@
+sergius:~/Рабочий стол/липо$ lex myLex.lex
+sergius:~/Рабочий стол/липо$ gcc lex.yy.c -lfl
+sergius:~/Рабочий стол/липо$ ./a.out
+Тип_слово	Идент	Брэк	Идент	Брэк
+Спец_слово
+Идент	Прис	Число	Брэк
+Идент	Прис	Число	Брэк
+Идент	Прис	СкобОтк	СкобОтк	Минус	Идент	Плюс	Идент	СкобЗакр	Опер	Идент	СкобЗакр		Брэк
+sergius:~/Рабочий стол/липо$ yacc -d mySynt.y && lex mySynt.lex && gcc lex.yy.c y.tab.c
+sergius:~/Рабочий стол/липо$ ./a.out
+sergius:~/Рабочий стол/липо$ yacc -d mySem.y && lex mySem.lex && gcc lex.yy.c y.tab.c
+sergius:~/Рабочий стол/липо$ ./a.out
+
+Var a,b : Long Integer
+Begin
+a:=15;
+b:=4;
+test:=((-a+b)*b);
+End.
+sergius:~/Рабочий стол/липо$
